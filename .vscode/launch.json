@@ -1,0 +1,350 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ClearITHBit",
+            "request": "launch",
+            "mainClass": "BitManipulation.ClearITHBit",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "setITHBIt",
+            "request": "launch",
+            "mainClass": "BitManipulation.setITHBIt",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "getIthBit",
+            "request": "launch",
+            "mainClass": "BitManipulation.getIthBit",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "OddEven",
+            "request": "launch",
+            "mainClass": "BitManipulation.OddEven",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BinONECOMPLEMENT",
+            "request": "launch",
+            "mainClass": "BitManipulation.BinONECOMPLEMENT",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BinaryXOR",
+            "request": "launch",
+            "mainClass": "BitManipulation.BinaryXOR",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BinaryOR",
+            "request": "launch",
+            "mainClass": "BitManipulation.BinaryOR",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BinaryAND",
+            "request": "launch",
+            "mainClass": "BitManipulation.BinaryAND",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Assign",
+            "request": "launch",
+            "mainClass": "Strings.Assign",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "StrBuilder",
+            "request": "launch",
+            "mainClass": "Strings.StrBuilder",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Substring",
+            "request": "launch",
+            "mainClass": "Strings.Substring",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "ShortestPath",
+            "request": "launch",
+            "mainClass": "Strings.ShortestPath",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "StringisPalindrome",
+            "request": "launch",
+            "mainClass": "Strings.StringisPalindrome",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Strings",
+            "request": "launch",
+            "mainClass": "Strings.Strings",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Assignment",
+            "request": "launch",
+            "mainClass": "TwoD_Arrays.Assignment",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "SearchSortedMatrix",
+            "request": "launch",
+            "mainClass": "TwoD_Arrays.SearchSortedMatrix",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "DiagonalMatrix",
+            "request": "launch",
+            "mainClass": "TwoD_Arrays.DiagonalMatrix",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "SpiralMatrix",
+            "request": "launch",
+            "mainClass": "TwoD_Arrays.SpiralMatrix",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Matrices",
+            "request": "launch",
+            "mainClass": "TwoD_Arrays.Matrices",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Assignment",
+            "request": "launch",
+            "mainClass": "Sorting.Assignment",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Sort",
+            "request": "launch",
+            "mainClass": "Sorting.Sort",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "CountingSort",
+            "request": "launch",
+            "mainClass": "Sorting.CountingSort",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "MaxSubArrayBruteForce",
+            "request": "launch",
+            "mainClass": "Sorting.MaxSubArrayBruteForce",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "ish",
+            "request": "launch",
+            "mainClass": "Sorting.ish",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "InbuiltSort",
+            "request": "launch",
+            "mainClass": "Sorting.InbuiltSort",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "InsertionSort",
+            "request": "launch",
+            "mainClass": "Sorting.InsertionSort",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "Sorting.SelectionSort",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "prac",
+            "request": "launch",
+            "mainClass": "Sorting.prac",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "AssQues",
+            "request": "launch",
+            "mainClass": "Arrays.AssQues",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "Sorting.BubbleSort",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BuySellStocks",
+            "request": "launch",
+            "mainClass": "Arrays.BuySellStocks",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "prac",
+            "request": "launch",
+            "mainClass": "Arrays.prac",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "trapped",
+            "request": "launch",
+            "mainClass": "Arrays.trapped",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "TrappedRainwater",
+            "request": "launch",
+            "mainClass": "Arrays.TrappedRainwater",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "MaxSum_KadanesAlgo",
+            "request": "launch",
+            "mainClass": "Arrays.MaxSum_KadanesAlgo",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "MaxSum_Subarr",
+            "request": "launch",
+            "mainClass": "Arrays.MaxSum_Subarr",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "MaxSubArr_Sum",
+            "request": "launch",
+            "mainClass": "Arrays.MaxSubArr_Sum",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Sum_of_SubArrays",
+            "request": "launch",
+            "mainClass": "Arrays.Sum_of_SubArrays",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "SubArrays",
+            "request": "launch",
+            "mainClass": "Arrays.SubArrays",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Pairs_in_Array",
+            "request": "launch",
+            "mainClass": "Arrays.Pairs_in_Array",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "ReverseArray",
+            "request": "launch",
+            "mainClass": "Arrays.ReverseArray",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "Arrays.BinarySearch",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "LargestNumber_in_Array",
+            "request": "launch",
+            "mainClass": "Arrays.LargestNumber_in_Array",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "LinearSearch",
+            "request": "launch",
+            "mainClass": "Arrays.LinearSearch",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Arrays",
+            "request": "launch",
+            "mainClass": "Arrays.Arrays",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Java",
+            "request": "launch",
+            "mainClass": "Arrays.Java",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "java",
+            "request": "launch",
+            "mainClass": "java",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Java",
+            "request": "launch",
+            "mainClass": "Java",
+            "projectName": "Java_dcd0d284"
+        }
+    ]
+}
