@@ -5,18 +5,13 @@
 // Input =  {7,1,5,3,6,4};
 // Output = the max profit = 5
 
-// LOGIC - // formula to find profit = selling price - buying price
-
+// LOGIC - 
+// formula to find profit = selling price - buying price
 // hume maxprofit nikalna hai = 0 starting mai , buyprice = minimum chahiye toh  +infinty > prices[i]krke nikal lenge 
-
 // loop chalayenge jisme agr buyprice (+infi) bda h current price s toh buying price = prices[i] yani current price hojayega hmara buying price
-
 // agr buyprice chota hai current price se toh hum profit nikalenge aur maxprofit update karenge ki pehle to maxprofit= 0 bda hai ya profit jo nikla hai use maxprofit mai store kr lenge
-
 // aise krke final maxprofit ajayega 
-
 // Agar profit kabhi positive nahi hota, matlab price hamesha girta raha ya same raha, toh maxProfit zero rahega. Agar tum chahte ho ki "agar profit nahi hua toh -1 return karo" toh last mein isko aise check kar sakte ho:
-
 // Time Complexity = O(n) kyuki 1 loop chala hai 
 
 package Arrays;
