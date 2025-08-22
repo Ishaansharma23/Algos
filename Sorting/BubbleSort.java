@@ -1,4 +1,4 @@
-// Bubble Sort
+// Bubble Sort - types of sorting method
 
 // Sort the unsorted Array
 
