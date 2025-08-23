@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "practice",
+            "request": "launch",
+            "mainClass": "practice",
+            "projectName": "Java_dcd0d284"
+        },
+        {
+            "type": "java",
             "name": "ClearITHBit",
             "request": "launch",
             "mainClass": "BitManipulation.ClearITHBit",
