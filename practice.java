@@ -86,16 +86,58 @@ public class practice {
         }
         System.out.println("Maximum Subarray Sum = " + maxSum);
     }
+
+    public static void PrefixArrSum(int arr[]) {
+        int maxSum = Integer.MIN_VALUE;
+
+        // prefix sum
+        int prefix[] = new int[arr.length];
+        prefix[0] =  arr[0];
+        for(int i = 1; i < arr.length ; i++){
+            prefix[i] = prefix[i - 1] + arr[i]; // prefix arr bna li 
+        }
+
+        for(int i = 0; i < prefix.length; i++){
+            for(int j = i + 1; j < prefix.length; j++){
+                int sum = 0;
+                sum = i == 0 ? prefix[j] : prefix[j] - prefix[i - 1]; 
+
+                if (maxSum < sum) {
+                    maxSum = sum;
+                    
+                }
+
+            }
+        }
+        System.out.println("Maximum Subarray Sum using Prefix Array = " + maxSum);
+
+
+    }
+
+   public static void KadanesSubArrSum(int arr[]) {
+        int maxsum = Integer.MIN_VALUE;
+        int currsum = 0;
+        for(int i = 0; i < arr.length;i++){
+            currsum = currsum + arr[i];
+            if ( currsum < 0) {
+                currsum = 0;
+            }
+            maxsum = Math.max(maxsum, currsum);
+        }
+        System.out.print("Our Max Sum = " + maxsum);
+   }
     
 
     public static void main(String[] args) {
         int arr[] = {2,4,6,8,10,12,14};
         int key = 10;
-        Largest(arr);
-        BinSearch(arr, key);
-        RevArr(arr);
-        Pairs(arr);
-        PrintSubArr(arr);
-        SubArrSum(arr);
+        // Largest(arr);
+        // BinSearch(arr, key);
+        // RevArr(arr);
+        // Pairs(arr);
+        // PrintSubArr(arr);
+        // SubArrSum(arr);
+        // PrefixArrSum(arr);
+        KadanesSubArrSum(arr);
     }
 }
