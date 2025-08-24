@@ -62,7 +62,9 @@ public class practice {
     public static void PrintSubArr(int arr[]) {
         for(int i = 0; i < arr.length; i++){
             for(int j = i ; j < arr.length; j++){
-                System.out.println(arr[i] + "," +  arr[j]);
+                for(int k = i; k <= j; k++){
+                    System.out.print(arr[k] + " ");
+                }
             }
             System.out.println();
         }
