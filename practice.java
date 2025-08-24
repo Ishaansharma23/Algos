@@ -70,13 +70,32 @@ public class practice {
         }
     }
 
+    public static void SubArrSum(int arr[]) { // Subarray sum using BRUTE FORCE
+        int maxSum = Integer.MIN_VALUE;
+        for(int i = 0; i < arr.length ; i++){
+            for(int j = i ; j < arr.length; j++){  
+                int sum = 0;
+                for(int k = i ; k <= j ; k++){
+                    sum = sum + arr[k];
+                }
+                if (maxSum < sum) {
+                    maxSum = sum;
+                }
+                System.out.println("Subarray ("+ i + "," + j + ") ka sum = " + sum); 
+            }
+        }
+        System.out.println("Maximum Subarray Sum = " + maxSum);
+    }
+    
+
     public static void main(String[] args) {
         int arr[] = {2,4,6,8,10,12,14};
         int key = 10;
-        // Largest(arr);
-        // BinSearch(arr, key);
-        // RevArr(arr);
-        // Pairs(arr);
+        Largest(arr);
+        BinSearch(arr, key);
+        RevArr(arr);
+        Pairs(arr);
         PrintSubArr(arr);
+        SubArrSum(arr);
     }
 }
