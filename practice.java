@@ -58,12 +58,23 @@ public class practice {
         }
        
     }
+
+    public static void PrintSubArr(int arr[]) {
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i ; j < arr.length; j++){
+                System.out.println(arr[i] + "," +  arr[j]);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         int arr[] = {2,4,6,8,10,12,14};
         int key = 10;
-        Largest(arr);
-        BinSearch(arr, key);
-        RevArr(arr);
-        Pairs(arr);
+        // Largest(arr);
+        // BinSearch(arr, key);
+        // RevArr(arr);
+        // Pairs(arr);
+        PrintSubArr(arr);
     }
 }
