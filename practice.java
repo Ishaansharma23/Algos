@@ -15,7 +15,7 @@ public class practice {
 
     }
 
-    public static void BinSearch(int arr[] , int key) {
+    public static void BinSearch(int arr[] , int key) { // binary search
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
@@ -31,7 +31,7 @@ public class practice {
         }
     }
 
-    public static void RevArr(int arr[]) {
+    public static void RevArr(int arr[]) { // Reverse an array 
       int first = 0;
       int last = arr.length - 1;
 
