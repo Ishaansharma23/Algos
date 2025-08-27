@@ -128,6 +128,32 @@ public class practice {
         }
         System.out.print("Our Max Sum = " + maxsum);
    }
+
+   public static void TrappedRainwater(int arr[]) {
+    // left max banao
+    int leftmax[] = new int[arr.length];
+    leftmax[0] = arr[0];
+    for(int i = 1 ; i < arr.length; i++){
+        leftmax[i] = Math.max(arr[i], leftmax[i - 1]);
+    }
+
+    // right max banao
+    int rightmax[] = new int[arr.length];
+    rightmax[arr.length - 1] = arr[arr.length - 1];
+    for(int i = arr.length - 2 ; i >= 0; i--){
+        rightmax[i] = Math.max(arr[i], rightmax[i + 1 ]);
+    }
+
+    // ab trapped water = height - waterlvl (min(leftmax, rightmax))
+    int trappedWater = 0;
+    for(int i = 0; i < arr.length ; i++ ){
+        int waterlvl = Math.min(leftmax[i], rightmax[i]); // kitna pani bhara hai 
+        // jitna pani bhara hai uss s jo arr ki height hai use minus krdia fir trapped water niklega
+        trappedWater += waterlvl - arr[i];
+    }
+
+    System.out.println(trappedWater);   // ans 0 isliye ara kyuki increasing order hai pani tik hi nahi skta 
+   }
     
 
     public static void main(String[] args) {
@@ -140,6 +166,7 @@ public class practice {
         // PrintSubArr(arr);
         // SubArrSum(arr);
         // PrefixArrSum(arr);
-        KadanesSubArrSum(arr);
+        // KadanesSubArrSum(arr);
+        TrappedRainwater(arr);
     }
 }
