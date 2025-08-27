@@ -168,12 +168,38 @@ public class practice {
             buyPrice = arr[i];
         }
     }
+    System.out.println("the max profit = " + maxProfit);
+
+   }
+
+   public static void BubbleSort(int arr[]) {
+
+    for(int i = 0; i < arr.length; i++){
+        int swaps = 0; // hr round k bad ek num/elem apni sahi position pr chala jata hai 
+        for(int j = 0; j < arr.length - 1 - i; j++){
+            if (arr[j] > arr[j + 1]) { // adjacent compare and push the biggest to the end in every swaps
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swaps++;
+            }
+        }
+        if (swaps == 0) {
+            break; // agr ek bhi swap nahi hua to array sorted hai
+            
+        }
+        System.out.println("the times of swaps are " + swaps);
+    }
+    for(int i = 0 ; i < arr.length ; i++){
+        System.out.print(arr[i] + " ");
+    }
+    System.out.println();
 
    }
     
 
     public static void main(String[] args) {
-        int arr[] = {2,4,6,8,10,12,14};
+        int arr[] = {5,4,1,3,7,2};
         int key = 10;
         // Largest(arr);
         // BinSearch(arr, key);
@@ -183,6 +209,8 @@ public class practice {
         // SubArrSum(arr);
         // PrefixArrSum(arr);
         // KadanesSubArrSum(arr);
-        TrappedRainwater(arr);
+        // TrappedRainwater(arr);
+        // BuySellStocks(arr);
+        BubbleSort(arr);
     }
 }
