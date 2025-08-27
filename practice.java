@@ -114,7 +114,7 @@ public class practice {
 
     }
 
-   public static void KadanesSubArrSum(int arr[]) {
+   public static void KadanesSubArrSum(int arr[]) { // kadanes sub array sum
         int maxsum = Integer.MIN_VALUE;
         int currsum = 0;
         for(int i = 0; i < arr.length;i++){
