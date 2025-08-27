@@ -87,7 +87,7 @@ public class practice {
         System.out.println("Maximum Subarray Sum = " + maxSum);
     }
 
-    public static void PrefixArrSum(int arr[]) {
+    public static void PrefixArrSum(int arr[]) { // prefix sum 
         int maxSum = Integer.MIN_VALUE;
 
         // prefix sum
