@@ -1,3 +1,5 @@
+// Did revised the concepts
+
 public class practice {
     public static void Largest(int arr[]) { // find th largest/smallest num in an arr 
         int largest = Integer.MIN_VALUE;
