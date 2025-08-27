@@ -154,6 +154,22 @@ public class practice {
 
     System.out.println(trappedWater);   // ans 0 isliye ara kyuki increasing order hai pani tik hi nahi skta 
    }
+
+   public static void BuySellStocks(int arr[]) {
+    
+    int buyPrice = Integer.MAX_VALUE; // sbse km rkhni hai humne buyprice
+    int maxProfit = 0; // max profit of the day
+    
+    for(int i = 0; i < arr.length ; i++){
+        if (buyPrice < arr[i]) { // to profit niklega
+            int profit = arr[i] - buyPrice; // profit = selling price - buyprice
+            maxProfit = Math.max(maxProfit, profit); // ye overall profit nahi nikal rhi ek specific din ka pura profit max 
+        }else{
+            buyPrice = arr[i];
+        }
+    }
+
+   }
     
 
     public static void main(String[] args) {
