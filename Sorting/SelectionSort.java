@@ -23,7 +23,7 @@ public class SelectionSort {
 
             // Find the index of the minimum element in the unsorted part
             for(int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[minIndex]) {
+                if (arr[minIndex] > arr[j]) {
                     minIndex = j;
                 }
             }
