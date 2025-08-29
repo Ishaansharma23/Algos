@@ -33,7 +33,7 @@ public class Assignment {
         }
     }
     public static void InsertionSort(int arr[]) {
-        for(int i = 1 ; i < arr.length ; i++){ // 1 elem sorted manlo loop second elem s strt kro
+        for(int i = 1 ; i < arr.length ; i++){ // first elem sorted manlo loop second elem s strt kro
             int curr = arr[i]; // curr = second elem at idx 1
             int prev = i  - 1; // prev hogya 1st elem 0th index wala
             while(prev >= 0 && arr[prev] > curr){ // arr[0] > second elem if yes then 
