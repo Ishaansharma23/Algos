@@ -9,7 +9,7 @@ public class CountingSort {
         }
 
         // ek count arr bnaynge 
-        int count[] = new int[largest + 1]; // largest + 1 isliye agr 7 hai to loop 0 to 6 tk jayega hume 7 bhi chahiye 
+        int count[] = new int[largest + 1]; // largest + 1 isliye agr 7elem hai to loop 0 to 6 tk jayega hume 7 wala elem bhi chahiye 
         for(int i = 0; i < arr.length ; i++){
             count[arr[i]]++;// // arr ke current element (arr[i]) ka count badha rahe hain
             // Jaise agar arr[i] = 3 hai, toh count[3]++ matlab 3 ek baar aur mil gaya
