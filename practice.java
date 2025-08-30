@@ -219,17 +219,20 @@ public class practice {
     
    public static void InsertionSort(int arr[]) {
 
-    for(int i = 0; i < arr.length; i++){
-        int curr = arr[i];
-        int prev = i - 1;
-            while (arr[prev] > curr && prev >= 0) {
-                arr[prev + 1] = arr[prev];
-                prev--;
-            }
-            arr[prev + 1] = curr;
-    }
+    for(int i = 1; i < arr.length; i++){       // i = 1 se start (pehla element already sorted maan lo)
+        int curr = arr[i];                     // curr = jo element insert karna hai
+        int prev = i - 1;                      // prev = uske pehle ka index
 
-   }
+        // piche ke elements check karte raho jab tak curr se bade hain
+        while(prev >= 0 && arr[prev] > curr) {
+            arr[prev + 1] = arr[prev];         // bade element ko ek step right shift karo
+            prev--;                            // aur pichhe chale jao
+        }
+
+        arr[prev + 1] = curr;                  // khali jagah mil gayi → curr insert kar do
+    }
+}
+
 
     public static void main(String[] args) {
         int arr[] = {5,4,1,3,7,2};
