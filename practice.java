@@ -1,15 +1,15 @@
 // Did revised the concepts
 
 public class practice {
-    public static void Largest(int arr[]) { // find th largest/smallest num in an arr 
+    public static void Largest(int arr[]) { // find th largest/smallest num in an arr
         int largest = Integer.MIN_VALUE;
         int smallest = Integer.MAX_VALUE;
-        for(int i = 0; i < arr.length ; i++){
+        for (int i = 0; i < arr.length; i++) {
             if (largest < arr[i]) {
                 largest = arr[i];
             }
             if (smallest > arr[i]) {
-                smallest = arr[i];       
+                smallest = arr[i];
             }
         }
         System.out.println("largest = " + largest);
@@ -17,11 +17,11 @@ public class practice {
 
     }
 
-    public static void BinSearch(int arr[] , int key) { // binary search
+    public static void BinSearch(int arr[], int key) { // binary search
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
-            int mid =  (start + end) / 2;
+            int mid = (start + end) / 2;
             if (arr[mid] < key) {
                 start = mid + 1; // key right side par hai
             } else if (arr[mid] > key) {
@@ -33,38 +33,38 @@ public class practice {
         }
     }
 
-    public static void RevArr(int arr[]) { // Reverse an array 
-      int first = 0;
-      int last = arr.length - 1;
+    public static void RevArr(int arr[]) { // Reverse an array
+        int first = 0;
+        int last = arr.length - 1;
 
-      while (first < last) {
-        int temp = arr[first];
-        arr[first] = arr[last];
-        arr[last] = temp;
-        first++;
-        last--;
-      }
+        while (first < last) {
+            int temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
 
-      for(int i = 0; i < arr.length; i++) {
-          System.out.print(arr[i] + " ");
-      }
-      System.out.println();
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 
     public static void Pairs(int arr[]) {
-        for(int i = 0; i < arr.length; i++){
-            for(int j = i + 1 ; j < arr.length; j++){
-                System.out.println(arr[i] +  "," + arr[j]);
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                System.out.println(arr[i] + "," + arr[j]);
             }
             System.out.println();
         }
-       
+
     }
 
     public static void PrintSubArr(int arr[]) { // Print SubArrays
-        for(int i = 0; i < arr.length; i++){
-            for(int j = i ; j < arr.length; j++){
-                for(int k = i; k <= j; k++){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                for (int k = i; k <= j; k++) {
                     System.out.print(arr[k] + " ");
                 }
             }
@@ -74,170 +74,196 @@ public class practice {
 
     public static void SubArrSum(int arr[]) { // Subarray sum using BRUTE FORCE
         int maxSum = Integer.MIN_VALUE;
-        for(int i = 0; i < arr.length ; i++){
-            for(int j = i ; j < arr.length; j++){  
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
                 int sum = 0;
-                for(int k = i ; k <= j ; k++){
+                for (int k = i; k <= j; k++) {
                     sum = sum + arr[k];
                 }
                 if (maxSum < sum) {
                     maxSum = sum;
                 }
-                System.out.println("Subarray ("+ i + "," + j + ") ka sum = " + sum); 
+                System.out.println("Subarray (" + i + "," + j + ") ka sum = " + sum);
             }
         }
         System.out.println("Maximum Subarray Sum = " + maxSum);
     }
 
-    public static void PrefixArrSum(int arr[]) { // prefix sum 
+    public static void PrefixArrSum(int arr[]) { // prefix sum
         int maxSum = Integer.MIN_VALUE;
 
         // prefix sum
         int prefix[] = new int[arr.length];
-        prefix[0] =  arr[0];
-        for(int i = 1; i < arr.length ; i++){
-            prefix[i] = prefix[i - 1] + arr[i]; // prefix arr bna li 
+        prefix[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i - 1] + arr[i]; // prefix arr bna li
         }
 
-        for(int i = 0; i < prefix.length; i++){
-            for(int j = i + 1; j < prefix.length; j++){
+        for (int i = 0; i < prefix.length; i++) {
+            for (int j = i + 1; j < prefix.length; j++) {
                 int sum = 0;
-                sum = i == 0 ? prefix[j] : prefix[j] - prefix[i - 1]; 
+                sum = i == 0 ? prefix[j] : prefix[j] - prefix[i - 1];
 
                 if (maxSum < sum) {
                     maxSum = sum;
-                    
+
                 }
 
             }
         }
         System.out.println("Maximum Subarray Sum using Prefix Array = " + maxSum);
 
-
     }
 
-   public static void KadanesSubArrSum(int arr[]) { // kadanes sub array sum
+    public static void KadanesSubArrSum(int arr[]) { // kadanes sub array sum
         int maxsum = Integer.MIN_VALUE;
         int currsum = 0;
-        for(int i = 0; i < arr.length;i++){
+        for (int i = 0; i < arr.length; i++) {
             currsum = currsum + arr[i];
-            if ( currsum < 0) {
+            if (currsum < 0) {
                 currsum = 0;
             }
             maxsum = Math.max(maxsum, currsum);
         }
         System.out.print("Our Max Sum = " + maxsum);
-   }
-
-   public static void TrappedRainwater(int arr[]) {
-    // left max banao
-    int leftmax[] = new int[arr.length];
-    leftmax[0] = arr[0];
-    for(int i = 1 ; i < arr.length; i++){
-        leftmax[i] = Math.max(arr[i], leftmax[i - 1]);
     }
 
-    // right max banao
-    int rightmax[] = new int[arr.length];
-    rightmax[arr.length - 1] = arr[arr.length - 1];
-    for(int i = arr.length - 2 ; i >= 0; i--){
-        rightmax[i] = Math.max(arr[i], rightmax[i + 1 ]);
-    }
-
-    // ab trapped water = height - waterlvl (min(leftmax, rightmax))
-    int trappedWater = 0;
-    for(int i = 0; i < arr.length ; i++ ){
-        int waterlvl = Math.min(leftmax[i], rightmax[i]); // kitna pani bhara hai 
-        // jitna pani bhara hai uss s jo arr ki height hai use minus krdia fir trapped water niklega
-        trappedWater += waterlvl - arr[i];
-    }
-
-    System.out.println(trappedWater);   // ans 0 isliye ara kyuki increasing order hai pani tik hi nahi skta 
-   }
-
-   public static void BuySellStocks(int arr[]) {
-    
-    int buyPrice = Integer.MAX_VALUE; // sbse km rkhni hai humne buyprice
-    int maxProfit = 0; // max profit of the day
-    
-    for(int i = 0; i < arr.length ; i++){
-        if (buyPrice < arr[i]) { // to profit niklega
-            int profit = arr[i] - buyPrice; // profit = selling price - buyprice
-            maxProfit = Math.max(maxProfit, profit); // ye overall profit nahi nikal rhi ek specific din ka pura profit max 
-        }else{
-            buyPrice = arr[i];
+    public static void TrappedRainwater(int arr[]) {
+        // left max banao
+        int leftmax[] = new int[arr.length];
+        leftmax[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            leftmax[i] = Math.max(arr[i], leftmax[i - 1]);
         }
+
+        // right max banao
+        int rightmax[] = new int[arr.length];
+        rightmax[arr.length - 1] = arr[arr.length - 1];
+        for (int i = arr.length - 2; i >= 0; i--) {
+            rightmax[i] = Math.max(arr[i], rightmax[i + 1]);
+        }
+
+        // ab trapped water = height - waterlvl (min(leftmax, rightmax))
+        int trappedWater = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int waterlvl = Math.min(leftmax[i], rightmax[i]); // kitna pani bhara hai
+            // jitna pani bhara hai uss s jo arr ki height hai use minus krdia fir trapped
+            // water niklega
+            trappedWater += waterlvl - arr[i];
+        }
+
+        System.out.println(trappedWater); // ans 0 isliye ara kyuki increasing order hai pani tik hi nahi skta
     }
-    System.out.println("the max profit = " + maxProfit);
 
-   }
+    public static void BuySellStocks(int arr[]) {
 
-   public static void BubbleSort(int arr[]) {
+        int buyPrice = Integer.MAX_VALUE; // sbse km rkhni hai humne buyprice
+        int maxProfit = 0; // max profit of the day
 
-    for(int i = 0; i < arr.length; i++){
-        int swaps = 0; // hr round k bad ek num/elem apni sahi position pr chala jata hai 
-        for(int j = 0; j < arr.length - 1 - i; j++){
-            if (arr[j] > arr[j + 1]) { // adjacent compare and push the biggest to the end in every swaps
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-                swaps++;
+        for (int i = 0; i < arr.length; i++) {
+            if (buyPrice < arr[i]) { // to profit niklega
+                int profit = arr[i] - buyPrice; // profit = selling price - buyprice
+                maxProfit = Math.max(maxProfit, profit); // ye overall profit nahi nikal rhi ek specific din ka pura
+                                                         // profit max
+            } else {
+                buyPrice = arr[i];
             }
         }
-        if (swaps == 0) {
-            break; // agr ek bhi swap nahi hua to array sorted hai
-            
+        System.out.println("the max profit = " + maxProfit);
+
+    }
+
+    public static void BubbleSort(int arr[]) {
+
+        for (int i = 0; i < arr.length; i++) {
+            int swaps = 0; // hr round k bad ek num/elem apni sahi position pr chala jata hai
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) { // adjacent compare and push the biggest to the end in every swaps
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swaps++;
+                }
+            }
+            if (swaps == 0) {
+                break; // agr ek bhi swap nahi hua to array sorted hai
+
+            }
+            System.out.println("the times of swaps are " + swaps);
         }
-        System.out.println("the times of swaps are " + swaps);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
     }
-    for(int i = 0 ; i < arr.length ; i++){
-        System.out.print(arr[i] + " ");
+
+    public static void SelectionSort(int arr[]) {
+
+        for (int i = 0; i < arr.length; i++) {
+            int minIndex = i; // asuming yehi sbse chota elem hai
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[minIndex] > arr[j]) {
+                    minIndex = j; // minindex ko update krdo
+                }
+            }
+
+            // pehle min nikalo sbse loop laga kr fir swap krdo jonsa bahar wala idx ka loop
+            // hai usske sth
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
-    System.out.println();
 
-   }
+    public static void InsertionSort(int arr[]) {
 
-   public static void SelectionSort(int arr[]) {
+        for (int i = 1; i < arr.length; i++) {
+            int curr = arr[i]; // current elem store krao
+            int prev = i - 1; // uske pehle wale index se compare karna start kar
+            while (prev >= 0 && arr[prev] > curr) { // jabtk prev negative nahi hojata tbtk check krte rho, left tk sare
+                                                    // elem check until prev = (-), loop chlta rhega
+                // && = dono condition true honi chahiye
+                arr[prev + 1] = arr[prev]; // bade elem ko chote ki jagah rkhdo
+                prev--; // ye isliye jruri hai kyuki jabtk prev >= 0 saari check hongi left side m elem
+                        // or sari hone k bad (-)hojayegi prev ki value
+            }
 
-      for(int i = 0; i < arr.length; i++){
-        int minIndex = i;   // asuming yehi sbse chota elem hai 
-        for(int j = i + 1; j < arr.length;j++){
-            if (arr[minIndex] > arr[j]) {
-                minIndex = j; // minindex ko update krdo
+            arr[prev + 1] = curr; // prev loop k bad wala jo hoga uska + 1 wala idx pr curr elem daldo
+
+        }
+
+    }
+
+    public static void CountingSort(int arr[]) {
+
+        int largest = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {  // sbse pehle largest nikalo
+            largest = Math.max(largest, arr[i]);
+        }
+        // fir count array banao jisme largest + 1 size ka array banao
+        int count[] = new int[largest + 1];
+        for(int i = 0; i < arr.length; i++){
+            count[arr[i]]++;
+        }
+
+        // sort krenge ab count arr mai jo count ka index hai usko arr mai dalte jayenge
+        int j = 0;
+        for(int i = 0; i < count.length; i++){
+            while(count[i] > 0){
+                arr[j] = i;
+                j++;
+                count[i]--;
             }
         }
 
-        // pehle min nikalo sbse loop laga kr fir swap krdo jonsa bahar wala idx ka loop hai usske sth
-        int temp = arr[i];
-        arr[i] = arr[minIndex];
-        arr[minIndex] = temp;
-      }
-      for(int i = 0; i < arr.length; i++){
-        System.out.print(arr[i] + " ");
-      }
-   }
-    
-   public static void InsertionSort(int arr[]) {
-
-    for(int i = 1; i < arr.length; i++){
-        int curr = arr[i];  // current elem store krao
-        int prev = i - 1;   // uske pehle wale index se compare karna start kar
-        while (prev >= 0 && arr[prev] > curr) { // jabtk prev negative nahi hojata tbtk check krte rho, left tk sare elem check until prev = (-), loop chlta rhega 
-            // && = dono condition true honi chahiye
-            arr[prev + 1] = arr[prev]; // bade elem ko chote ki jagah rkhdo
-            prev--; // ye isliye jruri hai kyuki jabtk prev >= 0 saari check hongi left side m elem or sari hone k bad (-)hojayegi prev ki value
-        }
-
-        arr[prev + 1] = curr; // prev loop k bad wala jo hoga uska + 1 wala idx pr curr elem daldo
-
     }
-
-   }
-
-
 
     public static void main(String[] args) {
-        int arr[] = {5,4,1,3,7,2};
+        int arr[] = { 5, 4, 1, 3, 7, 2 };
         int key = 10;
         // Largest(arr);
         // BinSearch(arr, key);
@@ -251,6 +277,7 @@ public class practice {
         // BuySellStocks(arr);
         // BubbleSort(arr);
         // SelectionSort(arr);
-        InsertionSort(arr);
+        // InsertionSort(arr);
+        CountingSort(arr);
     }
 }
