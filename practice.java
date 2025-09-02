@@ -219,19 +219,21 @@ public class practice {
     
    public static void InsertionSort(int arr[]) {
 
-    for(int i = 1; i < arr.length; i++){       // i = 1 se start (pehla element already sorted maan lo)
-        int curr = arr[i];                     // curr = jo element insert karna hai
-        int prev = i - 1;                      // prev = uske pehle ka index
-
-        // piche ke elements check karte raho jab tak curr se bade hain
-        while(prev >= 0 && arr[prev] > curr) {
-            arr[prev + 1] = arr[prev];         // bade element ko ek step right shift karo
-            prev--;                            // aur pichhe chale jao
+    for(int i = 1; i < arr.length; i++){
+        int curr = arr[i];  // current elem store krao
+        int prev = i - 1;   // uske pehle wale index se compare karna start kar
+        while (prev >= 0 && arr[prev] > curr) { // jabtk prev negative nahi hojata tbtk check krte rho, left tk sare elem check until prev = (-), loop chlta rhega 
+            // && = dono condition true honi chahiye
+            arr[prev + 1] = arr[prev]; // bade elem ko chote ki jagah rkhdo
+            prev--; // ye isliye jruri hai kyuki jabtk prev >= 0 saari check hongi left side m elem or sari hone k bad (-)hojayegi prev ki value
         }
 
-        arr[prev + 1] = curr;                  // khali jagah mil gayi → curr insert kar do
+        arr[prev + 1] = curr; // prev loop k bad wala jo hoga uska + 1 wala idx pr curr elem daldo
+
     }
-}
+
+   }
+
 
 
     public static void main(String[] args) {
