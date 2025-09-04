@@ -7,6 +7,7 @@ package TwoD_Arrays;
 import java.util.Scanner;
 
 public class Matrices {
+
     public static boolean Search(int matices[][], int key) { // To search or find the Element in the matrix
         for(int i = 0; i < matices.length; i++){// for rows
             for(int j = 0; j < matices[0].length; j++){ //  for columns

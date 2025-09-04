@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Assignment {
 
+
     public static void Matrix(int arr[][]) {
 
         Scanner sc = new Scanner(System.in);        // taking input from user
@@ -13,7 +14,7 @@ public class Assignment {
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
-                arr[i][j] = sc.nextInt();
+                arr[i][j] = sc.nextInt();   // input lere hai matrix ka 
             }
         }
 
