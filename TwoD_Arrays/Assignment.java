@@ -1,6 +1,30 @@
 package TwoD_Arrays;
 
+import java.util.Scanner;
+
 public class Assignment {
+
+    public static void Matrix(int arr[][]) {
+
+        Scanner sc = new Scanner(System.in);        // taking input from user
+        int n = arr.length;
+        int m  = arr[0].length;
+        System.out.println("Enter the elements of the matrix");
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
     public static void Count(int arr[][]) {
         int count = 0;
         int n = arr.length;
@@ -60,7 +84,9 @@ public class Assignment {
         };
         // Count(arr);
         // System.out.println(Sum(arr));
-        Transpose(arr);
+        // Transpose(arr);
+
+        Matrix(arr);
         
     }
 }

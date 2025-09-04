@@ -241,49 +241,49 @@ public class practice {
     public static void CountingSort(int arr[]) {
 
         int largest = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length; i++) {  // sbse pehle largest nikalo
+        for (int i = 0; i < arr.length; i++) { // sbse pehle largest nikalo
             largest = Math.max(largest, arr[i]);
         }
         // fir count array banao jisme largest + 1 size ka array banao
         int count[] = new int[largest + 1];
-        for(int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             count[arr[i]]++;
         }
 
         // sort krenge ab count arr mai jo count ka index hai usko arr mai dalte jayenge
         int j = 0;
-        for(int i = 0; i < count.length; i++){
-            while(count[i] > 0){
+        for (int i = 0; i < count.length; i++) {
+            while (count[i] > 0) {
                 arr[j] = i;
                 j++;
                 count[i]--;
             }
         }
 
-        for(int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
 
     }
 
     public static void RevArray(int num) { // reverse a number
-         int original = num;
-          int rev = 0;
-         while (num > 0) {
-            int lastDigit = num % 10;   // last digit nikalne k liye use hota ha % 
-            rev = rev * 10 + lastDigit; // last digit ko first digit banane k liye rev mai 
+        int original = num;
+        int rev = 0;
+        while (num > 0) {
+            int lastDigit = num % 10; // last digit nikalne k liye use hota ha %
+            rev = rev * 10 + lastDigit; // last digit ko first digit banane k liye rev mai
             // 0*10 + 4 = 4 , 4*10 + 3 = 43 , 43*10 + 2 = 432 -- like this
-            num = num / 10; // last digit remove krne k liye 
-     }
+            num = num / 10; // last digit remove krne k liye
+        }
 
-     if (original == rev) {
-        System.out.println("it is palindrome");
-     }else {
-        System.out.println("Not a palindrome");
-    }
+        if (original == rev) {
+            System.out.println("it is palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
 
-     System.out.println(rev);
-        
+        System.out.println(rev);
+
     }
 
     public static void main(String[] args) {
@@ -304,6 +304,6 @@ public class practice {
         // SelectionSort(arr);
         // InsertionSort(arr);
         // CountingSort(arr);
-       RevArray(num);
+        RevArray(num);
     }
 }
