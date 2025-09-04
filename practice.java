@@ -266,8 +266,23 @@ public class practice {
 
     }
 
+    public static void RevArray(int num) { // reverse a number
+            
+          int rev = 0;
+         while (num > 0) {
+            int lastDigit = num % 10;   // last digit nikalne k liye use hota ha % 
+            rev = rev * 10 + lastDigit; // last digit ko first digit banane k liye rev mai 
+            // 0*10 + 4 = 4 , 4*10 + 3 = 43 , 43*10 + 2 = 432 -- like this
+            num = num / 10; // last digit remove krne k liye 
+     }
+
+     System.out.println(rev);
+        
+    }
+
     public static void main(String[] args) {
         int arr[] = { 5, 4, 1, 3, 7, 2 };
+        int num = 12345;
         int key = 10;
         // Largest(arr);
         // BinSearch(arr, key);
@@ -282,6 +297,7 @@ public class practice {
         // BubbleSort(arr);
         // SelectionSort(arr);
         // InsertionSort(arr);
-        CountingSort(arr);
+        // CountingSort(arr);
+       RevArray(num);
     }
 }
