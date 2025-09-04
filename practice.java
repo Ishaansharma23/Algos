@@ -267,7 +267,7 @@ public class practice {
     }
 
     public static void RevArray(int num) { // reverse a number
-            
+         int original = num;
           int rev = 0;
          while (num > 0) {
             int lastDigit = num % 10;   // last digit nikalne k liye use hota ha % 
@@ -275,6 +275,12 @@ public class practice {
             // 0*10 + 4 = 4 , 4*10 + 3 = 43 , 43*10 + 2 = 432 -- like this
             num = num / 10; // last digit remove krne k liye 
      }
+
+     if (original == rev) {
+        System.out.println("it is palindrome");
+     }else {
+        System.out.println("Not a palindrome");
+    }
 
      System.out.println(rev);
         
